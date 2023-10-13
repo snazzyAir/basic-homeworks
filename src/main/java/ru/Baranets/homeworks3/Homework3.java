@@ -1,8 +1,8 @@
-package ru.Baranets.homeworks;
+package ru.baranets.homeworks3;
 
 import java.util.Scanner;
 
-public class homework1 {
+public class Homework3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class homework1 {
 
             int rnd = (int) (Math.random() * 30);
 
-            boolean b = Math.random() > 0;
+            boolean b = Math.random() > 0.5;
 
             if (result < 1 || result > 5) {
                 System.out.println("Введено неправильное число");
