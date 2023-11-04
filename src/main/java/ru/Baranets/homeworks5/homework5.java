@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class homework5 {
     public static void main(String[] args) {
-        m1(6, "Lessen");
+        m1(5, "Lessen");
         m2();
         m3(8, new int[10]);
         m4(7, new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});

@@ -9,7 +9,7 @@ public class homeworks7 {
         sumOfPositiveElements(new int[][]{{1, 5,}, {1, 1, 1, 1}});
         printSquare(5);
         diagonalSquare(new int[5][5]);
-        findMax(new int[][]{{1, 2, 3, 4, 5, 6, 7}, {1, 2, 6, 7, 8, 9, 1}});
+        findMax(new int[][]{{1, 2, 3, 4, 5, 6, 7}, {1, 2, 6, 7, 8, 9, 10}});
         sumSecondString(new int[][]{{1, 2, 3}, {5, 5, 5}});
     }
 
@@ -55,7 +55,7 @@ public class homeworks7 {
                 }
             }
         }
-        System.out.println(maxValue);
+        return;
     }
 
     public static int sumSecondString(int[][] array) {
