@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-
         User[] users = {
                 new User("Petrov", "Aleksandr", "Aleksandrovich", 1980, "abc@mail.ru"),
                 new User("Stepanov", "Petr", "Vasilevich", 1956, null),
@@ -30,5 +29,6 @@ public class Main {
         box.put("подарок");
         box.getIt();
         box.repaint("черный");
+        box.put("подарок");
     }
 }
