@@ -76,7 +76,7 @@ public class Box {
         if (this.item == null) {
             System.out.println("коробка пуста");
         } else {
-            item=null;
+            item = null;
             System.out.println("забрали предмет из коробки");
             return;
         }
