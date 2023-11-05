@@ -30,5 +30,6 @@ public class Main {
         box.put("подарок");
         box.getIt();
         box.repaint("черный");
+        box.put("подарок");
     }
 }

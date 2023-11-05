@@ -1,9 +1,9 @@
 package ru.baranets.homeworks10;
 
 public class Box {
-    private int length;
-    private int width;
-    private int height;
+    final int length;
+    final int width;
+    final int height;
     private String item;
     private String color;
     private boolean isClosed;
@@ -76,7 +76,8 @@ public class Box {
         if (this.item == null) {
             System.out.println("коробка пуста");
         } else {
-            System.out.println("достали " + item + " из коробки");
+            item=null;
+            System.out.println("забрали предмет из коробки");
             return;
         }
     }
