@@ -9,10 +9,12 @@ public class Box {
     private boolean isClosed;
 
     public int getLength() {
+
         return length;
     }
 
     public int getWidth() {
+
         return width;
     }
 
@@ -21,10 +23,12 @@ public class Box {
     }
 
     public String getColor() {
+
         return color;
     }
 
     public boolean isClosed() {
+
         return isClosed;
     }
 
