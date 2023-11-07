@@ -1,4 +1,4 @@
-package ru.baranets.homeworks11.animals;
+package ru.baranets.homeworks11.Animal;
 
 public class Animal {
     protected String name;
@@ -19,15 +19,25 @@ public class Animal {
             System.out.println(name + " устал(а)");
             return;
         }
-
         stamina -= distance;
         time = distance / runSpeed;
         System.out.println(name + " пробежал(а): " + distance + " метров за: " + time + " секунд.");
-
+        return;
     }
 
     public void info() {
         System.out.println(name + " - осталось " + stamina + " едениц выносливости.");
     }
 
+    public void swim(int distance) {
+        double time = 0;
+        if (stamina < distance) {
+            System.out.println(name + " устал(а)");
+            time = -1;
+            time = distance / swimSpeed;
+            System.out.println(name + " проплыл(а): " + distance + " метров за: " + time + " секунд.");
+            return;
+
+        }
+    }
 }

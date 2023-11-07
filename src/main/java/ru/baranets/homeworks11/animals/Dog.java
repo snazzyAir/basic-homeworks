@@ -1,5 +1,7 @@
 package ru.baranets.homeworks11.animals;
 
+import ru.baranets.homeworks11.Animal.Animal;
+
 public class Dog extends Animal {
     public Dog(String name, int runSpeed, int swimSpeed, int stamina) {
         super(name, runSpeed, stamina);

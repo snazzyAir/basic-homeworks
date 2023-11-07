@@ -46,6 +46,7 @@ public class Box {
     }
 
     public void repaint(String colorNew) {
+
         color = colorNew;
     }
 
