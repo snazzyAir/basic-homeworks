@@ -8,16 +8,16 @@ public class Dog extends Animal {
         this.swimSpeed = swimSpeed;
     }
 
-    public void swim(int distance) {
-        double time = 0;
-        distance *= 2;
+    public int swim(int distance) {
+        int time = 0;
         if (stamina < distance) {
             System.out.println(name + " устал(а)");
-            time = -1;
-            return;
+
+            return time = -1;
         }
-        stamina -= distance;
+        stamina -= distance * 2;
         time = distance / swimSpeed;
         System.out.println(name + " проплыл(а): " + distance + " метров за: " + time + " секунд.");
+        return time;
     }
 }

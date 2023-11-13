@@ -5,6 +5,7 @@ public class Animal {
     protected int runSpeed;
     protected int swimSpeed;
     protected int stamina;
+    protected int time;
 
     public Animal(String name, int runSpeed, int stamina) {
         this.name = name;
@@ -12,32 +13,30 @@ public class Animal {
         this.stamina = stamina;
     }
 
-    public void run(int distance) {
-        double time = 0;
+    public int run(int distance) {
+        int time = 0;
         if (stamina < distance) {
-            time = -1;
             System.out.println(name + " устал(а)");
-            return;
+            return time = -1;
         }
         stamina -= distance;
         time = distance / runSpeed;
         System.out.println(name + " пробежал(а): " + distance + " метров за: " + time + " секунд.");
-        return;
+        return time;
     }
 
     public void info() {
         System.out.println(name + " - осталось " + stamina + " едениц выносливости.");
     }
 
-    public void swim(int distance) {
-        double time = 0;
+    public int swim(int distance) {
+        int time = 0;
         if (stamina < distance) {
             System.out.println(name + " устал(а)");
-            time = -1;
-            time = distance / swimSpeed;
-            System.out.println(name + " проплыл(а): " + distance + " метров за: " + time + " секунд.");
-            return;
-
+            return time = -1;
         }
+        time = distance / swimSpeed;
+        System.out.println(name + " проплыл(а): " + distance + " метров за: " + time + " секунд.");
+        return time;
     }
 }
