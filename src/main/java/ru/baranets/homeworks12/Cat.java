@@ -5,14 +5,14 @@ public class Cat {
     private int appetite;
     private boolean satiety;
 
-    public Cat(String name, int appetite, boolean satiety) {
+    public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
-        this.satiety = satiety;
+        this.satiety = false;
     }
 
     public void eat(Plate plate) {
-        if (plate.thereIsFood < appetite) {
+        if (plate.getThereIsFood() < appetite && plate.getThereIsFood() > 0) {
             System.out.println(name + " не доволен, слишком мало еды ;(");
             satiety = false;
             return;
@@ -20,11 +20,10 @@ public class Cat {
         System.out.println(name + " поел");
         plate.take(appetite);
         satiety = true;
-
     }
 
     public void info() {
-        if (satiety = true) {
+        if (satiety) {
             System.out.println(name + " сыт и доволен");
         } else {
             System.out.println(name + " хочет есть");

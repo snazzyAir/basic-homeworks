@@ -1,37 +1,38 @@
 package ru.baranets.homeworks12;
 
 public class Plate {
-    private int maxFood;
-    protected int thereIsFood;
-    private int food;
+    private final int maxFood;
+    private int thereIsFood;
 
-    public Plate(int maxFood, int thereIsFood) {
+    public Plate(int maxFood) {
         this.maxFood = maxFood;
-        this.thereIsFood = thereIsFood;
+        this.thereIsFood = maxFood;
     }
 
     public void fill(int food) {
-        thereIsFood += food;
-        if (thereIsFood > maxFood) {
-            System.out.println("В тарелке нет места");
-            return ;
-        }
-        else {
+        if (thereIsFood + food > maxFood) {
+            System.out.println("В тарелке не хватает места");
+            return;
+        } else {
+            thereIsFood += food;
             System.out.println("Положили " + food + " камушков");
             System.out.println("В тарелке лежит: " + thereIsFood + " камушков");
         }
-
     }
+
     public boolean take(int food) {
-        thereIsFood -= food;
-        if(thereIsFood>=0) {
+        if (thereIsFood >= food) {
+            thereIsFood -= food;
+            System.out.println("Забрали " + food + " камушков");
+            System.out.println("В тарелке лежит: " + thereIsFood + " камушков");
             return true;
-        }
-        else {
+        } else {
             System.out.println("Тарелка пуста");
             return false;
         }
-
     }
 
+    public int getThereIsFood() {
+        return thereIsFood;
+    }
 }
