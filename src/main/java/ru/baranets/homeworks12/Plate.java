@@ -8,7 +8,6 @@ public class Plate {
         this.maxFood = maxFood;
         this.thereIsFood = maxFood;
     }
-
     public void fill(int food) {
         if (thereIsFood + food > maxFood) {
             System.out.println("В тарелке не хватает места");
@@ -19,7 +18,6 @@ public class Plate {
             System.out.println("В тарелке лежит: " + thereIsFood + " камушков");
         }
     }
-
     public boolean take(int food) {
         if (thereIsFood >= food) {
             thereIsFood -= food;
@@ -31,7 +29,6 @@ public class Plate {
             return false;
         }
     }
-
     public int getThereIsFood() {
         return thereIsFood;
     }
