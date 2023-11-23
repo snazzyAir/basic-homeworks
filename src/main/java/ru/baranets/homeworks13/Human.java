@@ -33,19 +33,48 @@ public class Human {
         }
     }
 
-    public Transport getCurrentTransport() {
-        return currentTransport;
+    public String getName() {
+        return name;
     }
 
-    public void setCurrentTransport(Transport currentTransport) {
-        this.currentTransport = currentTransport;
+    public Transport getCurrentTransport() {
+        return currentTransport;
     }
 
     public int getStamina() {
         return stamina;
     }
 
+    public int getStaminaConsumptionCoefficientPerMeter() {
+        return staminaConsumptionCoefficientPerMeter;
+    }
+
+    public void setCurrentTransport(Transport currentTransport) {
+        this.currentTransport = currentTransport;
+    }
+
     public void setStamina(int stamina) {
         this.stamina = stamina;
+    }
+
+    public void setSitingOnTransport(boolean sitingOnTransport) {
+        isSitingOnTransport = sitingOnTransport;
+    }
+
+    public boolean isSitingOnTransport() {
+        return isSitingOnTransport;
+    }
+
+    public void info() {
+        System.out.println("выносливость человека: " + stamina);
+
+    }
+
+    public void setDrive(Transport transport) {
+        if (!isSitingOnTransport) {
+            currentTransport = transport;
+            System.out.println(name + " сел(а) в: " + transport);
+        }else {
+        }System.out.println(name + " сидит в " + transport);
     }
 }

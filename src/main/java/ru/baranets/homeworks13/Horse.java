@@ -21,4 +21,5 @@ public class Horse implements Transport {
         System.out.println("Пройдено: " + distance + " метров" + " Осталось: " + stamina + " выносливости");
         return true;
     }
+
 }

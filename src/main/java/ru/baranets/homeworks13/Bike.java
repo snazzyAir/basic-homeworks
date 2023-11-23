@@ -6,7 +6,7 @@ public class Bike implements Transport {
 
     public Bike(Human staminaHuman) {
         this.staminaHuman = staminaHuman;
-        this.staminaConsumptionCoefficientPerMeter = 3;
+        this.staminaConsumptionCoefficientPerMeter = 2;
     }
 
     @Override
@@ -17,12 +17,12 @@ public class Bike implements Transport {
         }
         if (staminaHuman.getStamina() >= staminaHuman.getStamina() - distance * staminaConsumptionCoefficientPerMeter) {
             int remainingStamina = staminaHuman.getStamina() - distance * staminaConsumptionCoefficientPerMeter;
+            staminaHuman.setStamina(remainingStamina);
             System.out.println("Велосипед проехал " + distance + " метров");
             return true;
         } else {
             System.out.println("не хватает сил для перемещения ");
             return false;
         }
-
     }
 }
