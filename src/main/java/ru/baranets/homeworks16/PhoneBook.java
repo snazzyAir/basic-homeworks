@@ -1,4 +1,4 @@
-package ru.baranets;
+package ru.baranets.homeworks16;
 
 import java.util.HashMap;
 import java.util.HashSet;
