@@ -1,9 +1,12 @@
 package ru.baranets.homeworks17;
 
+import java.util.Arrays;
+
 public class MyLinkedList {
     private Item first;
     private Item last;
     private int size = 0;
+
     public void addFirst(int value) {
         final Item f = first;
         Item item = new Item(value, f, null);
@@ -15,6 +18,7 @@ public class MyLinkedList {
             size++;
         }
     }
+
     public void addLast(int value) {
         final Item l = last;
         final Item item = new Item(value, null, l);
@@ -30,14 +34,13 @@ public class MyLinkedList {
         if (first == null) {
             return null;
         }
-        System.out.println(first.value);
         return first;
     }
+
     public Item getLast() {
         if (last == null) {
             return null;
         }
-        System.out.println(last.value);
         return last;
     }
 
@@ -57,6 +60,7 @@ public class MyLinkedList {
             size++;
         }
     }
+
     public Item get(int position) {
         Item curr = first;
         for (int i = 0; i < position; i++) {
@@ -87,8 +91,7 @@ public class MyLinkedList {
             if (first == null) {
                 last = null;
             }
-        }
-        else {
+        } else {
             Item prev = get(position - 1);
             Item current = prev.next;
             Item next = current.next;
@@ -97,13 +100,15 @@ public class MyLinkedList {
         }
         size--;
     }
-    public int getSize(){
+
+    public int getSize() {
         int sizeG = 0;
         for (int i = 0; i < size; i++) {
             sizeG++;
         }
         return sizeG;
     }
+
     private static class Item {
         int value;
         Item next;
@@ -114,6 +119,22 @@ public class MyLinkedList {
             this.next = next;
             this.previous = previous;
         }
+    }
+
+    public static void arraySorting(int[] array) {
+        boolean exchange = true;
+        while (exchange) {
+            exchange = false;
+            for (int i = 1; i < array.length; i++) {
+                int curr = array[i - 1];
+                if (curr > array[i]) {
+                    array[i - 1] = array[i];
+                    array[i] = curr;
+                    exchange = true;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(array));
     }
 }
 

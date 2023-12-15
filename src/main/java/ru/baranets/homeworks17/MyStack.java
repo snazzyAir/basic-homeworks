@@ -7,8 +7,8 @@ public class MyStack {
         list.addFirst(data);
     }
 
-    public void pop(int data) {
-        list.remove(data);
+    public void pop() {
+        list.remove(1);
     }
 
 }

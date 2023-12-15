@@ -20,19 +20,7 @@ public class MyLinkedListTest {
 
         System.out.println(list.toString());
 
-        int[] array = {4,5,4,6,29,75,64,0,-9,-5,-3,0,16};
-        boolean exchange = true;
-        while (exchange) {
-            exchange = false;
-            for (int i = 1; i < array.length; i++) {
-                int curr = array[i - 1];
-                if (curr > array[i]) {
-                    array[i - 1] = array[i];
-                    array[i] = curr;
-                    exchange = true;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(array));
+
+
     }
 }
