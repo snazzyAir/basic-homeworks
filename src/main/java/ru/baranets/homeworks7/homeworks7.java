@@ -1,4 +1,4 @@
-package ru.baranets;
+package ru.baranets.homeworks7;
 
 
 import java.util.Arrays;
