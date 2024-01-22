@@ -8,7 +8,6 @@ public class Box<T extends Fruit> {
     public Box() {
         fruits = new ArrayList<>();
     }
-
     public void addFruits(T fruit) {
         fruits.add(fruit);
     }
