@@ -33,7 +33,6 @@ public class Client {
             clientSocket.close();
         } catch (IOException e) {
             e.printStackTrace();
-
         }
     }
 }

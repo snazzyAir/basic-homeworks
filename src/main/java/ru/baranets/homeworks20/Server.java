@@ -18,7 +18,6 @@ public class Server {
 
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-
             System.out.println("Available operations: +, -, *, /");
 
             while (true) {
