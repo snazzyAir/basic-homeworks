@@ -1,4 +1,4 @@
-package ru.baranets.homeworks20;
+package ru.baranets.homework20;
 
 import java.io.BufferedReader;
 import java.io.IOException;
