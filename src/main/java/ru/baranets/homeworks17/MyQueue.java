@@ -10,6 +10,7 @@ public class MyQueue {
 
     public void poll() {
         list.remove(0);
+        return;
     }
 
 }

@@ -8,7 +8,8 @@ public class MyStack {
     }
 
     public void pop() {
-        list.remove(1);
+        list.get(0);
+        list.remove(0);
     }
 
 }
